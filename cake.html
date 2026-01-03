@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Happy Birthday Extravaganza!</title>
@@ -7,23 +8,26 @@
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700&family=Roboto:wght@400&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <style>
     /* ===== CSS Variables for Theme ===== */
     :root {
-  --primary-color: #ff4b2b;
-  --secondary-color: #ff416c;
-  --accent-color: #ff8c00;
-  --bg-light: #ffc371;
-  --text-color: #f70073;
-}
+      --primary-color: #2e7d32;
+      --secondary-color: #8e24aa;
+      --accent-color: #ff8c00;
+      --bg-light: #ffc371;
+      --text-color: #f70073;
+    }
 
+    /* :root {
+  --primary-color: #6a1b9a;    Morado profundo 
+  --secondary-color: #8e24aa;  Morado vibrante 
+  --accent-color: #2e7d32;     Verde elegante 
+  --bg-light: #c8e6c9;         Verde claro suave 
+  --text-color: #4a148c;       Morado oscuro para texto 
+ */
 
     /* ===== CSS Reset ===== */
     * {
@@ -31,6 +35,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, var(--secondary-color), var(--bg-light));
@@ -60,11 +65,13 @@
       overflow: hidden;
       animation: fadeInBox 2s ease forwards;
     }
+
     @keyframes fadeInBox {
       from {
         opacity: 0;
         transform: scale(0.8);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -80,16 +87,19 @@
       animation: slideDown 1.5s ease forwards;
       opacity: 0;
     }
+
     @keyframes slideDown {
       from {
         opacity: 0;
         transform: translateX(-50%) translateY(-50px);
       }
+
       to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
       }
     }
+
     .image img {
       width: 200px;
     }
@@ -103,22 +113,27 @@
       animation: bounceText 2s ease-out forwards;
       opacity: 0;
     }
+
     @keyframes bounceText {
       0% {
         opacity: 0;
         transform: translateX(-50%) translateY(-100px);
       }
+
       60% {
         opacity: 1;
         transform: translateX(-50%) translateY(20px);
       }
+
       80% {
         transform: translateX(-50%) translateY(-10px);
       }
+
       100% {
         transform: translateX(-50%) translateY(0);
       }
     }
+
     .text-happybirthday img {
       width: 300px;
     }
@@ -132,20 +147,24 @@
       animation: riseUp 2s ease-out forwards;
       opacity: 0;
     }
+
     @keyframes riseUp {
       from {
         opacity: 0;
         transform: translateX(-50%) translateY(100px);
       }
+
       to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
       }
     }
+
     .cake img {
       width: 350px;
       transition: transform 0.3s ease;
     }
+
     .cake img:hover {
       transform: scale(1.05) rotate(2deg);
     }
@@ -159,49 +178,60 @@
       height: 100%;
       pointer-events: none;
     }
+
     .balloon {
       position: absolute;
       width: 80px;
       animation: floatBalloon 6s ease-in-out infinite;
       opacity: 0;
     }
+
     @keyframes floatBalloon {
       0% {
         opacity: 0;
         transform: translateY(100px) scale(0.8);
       }
+
       20% {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
+
       50% {
         transform: translateY(-50px) scale(1.1);
       }
+
       80% {
         transform: translateY(0) scale(1);
       }
+
       100% {
         opacity: 0;
         transform: translateY(100px) scale(0.8);
       }
     }
+
     /* Positioning balloons with staggered delays */
     .balloon:nth-child(1) {
       left: 10%;
       animation-delay: 0s;
     }
+
     .balloon:nth-child(2) {
       left: 30%;
       animation-delay: 1s;
     }
+
     .balloon:nth-child(3) {
       left: 50%;
       animation-delay: 2s;
     }
+
     .balloon:nth-child(4) {
       left: 70%;
       animation-delay: 1.5s;
     }
+
     .balloon:nth-child(5) {
       left: 85%;
       animation-delay: 0.5s;
@@ -216,20 +246,24 @@
       justify-content: space-between;
       pointer-events: none;
     }
+
     .cloud {
       position: relative;
       width: 120px;
       opacity: 0.9;
       animation: driftCloud 20s linear infinite;
     }
+
     @keyframes driftCloud {
       0% {
         transform: translateX(-150px);
       }
+
       100% {
         transform: translateX(100vw);
       }
     }
+
     .cloud img {
       width: 100%;
     }
@@ -241,6 +275,7 @@
       height: 100%;
       pointer-events: none;
     }
+
     .firework {
       position: absolute;
       width: 100px;
@@ -248,36 +283,43 @@
       animation: burst 1s ease-out forwards;
       opacity: 0;
     }
+
     @keyframes burst {
       0% {
         opacity: 1;
         transform: scale(0.1);
       }
+
       70% {
         opacity: 1;
         transform: scale(1.2);
       }
+
       100% {
         opacity: 0;
         transform: scale(1.5);
       }
     }
+
     /* Random fireworks positions and delays */
     .firework:nth-child(1) {
       top: 20%;
       left: 20%;
       animation-delay: 4s;
     }
+
     .firework:nth-child(2) {
       top: 10%;
       left: 60%;
       animation-delay: 4.5s;
     }
+
     .firework:nth-child(3) {
       top: 50%;
       left: 30%;
       animation-delay: 5s;
     }
+
     .firework:nth-child(4) {
       top: 40%;
       left: 80%;
@@ -293,16 +335,19 @@
       animation: cannonZoom 1.5s ease-out forwards;
       opacity: 0;
     }
+
     @keyframes cannonZoom {
       from {
         opacity: 0;
         transform: translateX(-50%) scale(0.5);
       }
+
       to {
         opacity: 1;
         transform: translateX(-50%) scale(1);
       }
     }
+
     .paperCannons img {
       width: 400px;
     }
@@ -322,21 +367,25 @@
       animation: appearGift 2s ease-out forwards;
       animation-delay: 6s;
     }
+
     @keyframes appearGift {
       from {
         opacity: 0;
         transform: translate(-50%, -40%);
       }
+
       to {
         opacity: 1;
         transform: translate(-50%, -50%);
       }
     }
+
     .box-giftbox img {
       width: 50px;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
+
     .box-giftbox img:hover {
       transform: rotate(10deg) scale(1.2);
     }
@@ -359,21 +408,25 @@
       opacity: 0;
       animation-delay: 7s;
     }
+
     @keyframes popUp {
       from {
         opacity: 0;
         transform: scale(0.5);
       }
+
       to {
         opacity: 1;
         transform: scale(1);
       }
     }
+
     .mail .fa-envelope {
       font-size: 36px;
       color: var(--accent-color);
       transition: transform 0.3s ease;
     }
+
     .mail:hover .fa-envelope {
       transform: rotate(15deg);
     }
@@ -390,20 +443,24 @@
       animation: cuteAppear 2s ease-out forwards;
       animation-delay: 8s;
     }
+
     @keyframes cuteAppear {
       from {
         opacity: 0;
         transform: translateY(-20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .cute {
       width: 80px;
       transition: transform 0.3s ease;
     }
+
     .cute:hover {
       transform: scale(1.1) rotate(5deg);
     }
@@ -425,11 +482,13 @@
       transition: opacity 0.5s ease, transform 0.5s ease;
       z-index: 9999;
     }
+
     .boxMail.active {
       opacity: 1;
       visibility: visible;
       transform: scale(1);
     }
+
     .boxMail-container {
       position: relative;
       width: 750px;
@@ -437,6 +496,7 @@
       display: flex;
       perspective: 2000px;
     }
+
     .card {
       flex: 1;
       border: 1px solid #ccc;
@@ -448,11 +508,13 @@
       backface-visibility: hidden;
       transition: transform 1s ease;
     }
+
     .card1 {
       background: linear-gradient(135deg, var(--accent-color), #ff7a90);
       color: white;
       transform-origin: left;
     }
+
     .card1 .userImg {
       width: 80px;
       height: 80px;
@@ -461,35 +523,42 @@
       margin-bottom: 20px;
       border: 3px solid white;
     }
+
     .card1 .userImg img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .card1 h3 {
       font-family: 'Dancing Script', cursive;
       font-size: 40px;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
+
     .card2 {
       background: linear-gradient(135deg, #e0e0e0, #ffffff);
       color: var(--text-color);
       transform-origin: right;
     }
+
     .card2 .card2-content {
       padding: 20px;
-      text-align: center;
+      text-align: left;
       font-family: 'Roboto', sans-serif;
     }
+
     .card2 h3 {
       font-family: 'Dancing Script', cursive;
       font-size: 30px;
       margin-bottom: 10px;
     }
+
     .card2 h2 {
       font-size: 18px;
       line-height: 1.4;
     }
+
     .boxMail .fa-xmark {
       position: absolute;
       top: 10px;
@@ -507,14 +576,17 @@
       will-change: transform, opacity;
       animation: fadeOut 1s linear forwards;
     }
+
     @keyframes fadeOut {
       from {
         opacity: 1;
       }
+
       to {
         opacity: 0;
       }
     }
+
     span.mouse-heart::before {
       content: '';
       display: block;
@@ -532,12 +604,14 @@
       font-size: 1rem;
       color: #fff6f9;
     }
+
     #copy a {
       text-decoration: none;
       color: #191919d7;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="boxcontainer">
@@ -615,26 +689,51 @@
     <div class="boxMail-container">
       <div class="card card1">
         <div class="userImg">
-          <img src="truongan.png" alt="User" />
+          <img src="nadi.jpeg" alt="User" />
         </div>
         <h3>Happy Birthday</h3>
       </div>
       <div class="card card2">
         <div class="card2-content">
-          <h3>To You!</h3>
-          <h2>
-            Oh my goodness! Today is a very special day for a very special person.
-            Wishing you endless joy, success, and love. May your birthday be as bright as your smile!
-          </h2>
+          <h3>For You!</h3>
+          <h5>
+            <p>20 años de historias que no todos conocen.</p>
+            <p>20 años de risas que contagian.</p>
+            <p>20 años de caídas que dolieron,
+            y de levantarte aun cuando el lugar más difícil era casa.</p>
+
+            <p>20 años aprendiendo a ser fuerte sin dejar de ser dulce.</p>
+            <p>20 años enfrentando cosas grandes con un corazón enorme.</p>
+            <p> años esforzándote más de lo que muchos ven,
+            y aun así eligiendo seguir.</p>
+
+            <p>Desde esa niña que aprendió a resistir,
+            hasta esta chica increíble que hoy sonríe, es coquette, sueña
+            y sigue caminando sin perder su esencia.</p>
+
+            <p></p>Eres divertida sin esfuerzo,
+            amable sin fingir,
+            cariñosa sin medida,
+            y peligrosamente encantadora cuando decides serlo 🤭</p>
+
+            <p>20 años de crecimiento,
+            20 años de valentía silenciosa,
+            20 años construyéndote a ti misma
+            con amor, con errores, con ganas.</p>
+
+            <p>Y se vienen muchos más.
+            Más alegrías, más calma, más sueños cumplidos,
+            y ojalá una vida que te abrace tan bonito
+            como tú abrazas a los demás.
+            Estoy super orgullos de ti🥺😽</p>
+
+            Feliz cumpleaños a esta chica que merece todo lo bueno
+            y mucho más ✨❤️❤️
+          </h5>
         </div>
       </div>
     </div>
     <i class="fa-solid fa-xmark" id="closeModal"></i>
-  </div>
-
-  <!-- Copy / OG Creator -->
-  <div id="copy">
-    <p>OG Creator <a href="https://www.instagram.com/shobhit_dev_">@shobhit_dev_</a></p>
   </div>
 
   <script>
@@ -677,4 +776,5 @@
     });
   </script>
 </body>
+
 </html>

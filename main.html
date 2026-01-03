@@ -259,7 +259,7 @@
         min-width: 40px;
       }
       .birthday-message {
-        font-size: 2.8rem;
+        font-size: 2rem;
       }
       .next-button {
         padding: 12px 24px;
@@ -296,11 +296,6 @@
         <div id="seconds" class="digit">00</div> Seconds
       </div>
     </div>
-  </div>
-  
-  <!-- Credits -->
-  <div class="credit">
-    Created by Shobhit Dev | <a href="https://www.instagram.com/shobhit_dev_/" target="_blank">Instagram</a>
   </div>
   
   <script>
@@ -349,25 +344,37 @@
     }
     
     // 4) Typing Animation for Paragraphs
-    const paragraphs = [
-`/**
-* My Eternal Love Story
-**/`,
+const paragraphs = [
+`De: Del inquieto 
+Para: La dormilona`,
 
-`Dearest Shobhit,
-From the moment our eyes met...`,
+`Aún recuerdo ese día en la universidad,
+cuando nos conocimos jugando ajedrez ♟️.
+No fue solo una partida,
+fue el comienzo de algo que no sabía cómo explicar.`,
 
-`Hey Shobhit,
+`Fue un miercoles 20 de agosto de 2025,
+aproximadamente a las dos y media de la tarde.
+Entre cada movimiento del tablero,
+sin darme cuenta, empecé a mirarte diferente.`,
 
-We've known each other for quite a while now. I remember the first time I saw you👀, you had 1517 followers✨.`,
+`No hubo grandes palabras ni momentos perfectos,
+pero hubo algo real.
+Tu forma de pensar, tu tranquilidad,
+y esa manera tan tuya de estar ahí,
+hicieron que ese momento se quedara en mi corazón(como cuando estabas desesperada por calentar tu comida🤭).`,
 
-`It was a Monday 🗿, June 10th 🗓, and it was exactly 8:21 PM 🕒.`,
+`Desde entonces, cada recuerdo tuyo
+se volvió especial.
+A veces pienso que algunas personas
+llegan sin avisar,
+pero se quedan sin pedir permiso.`,
 
-`So, it's been 8 months and 4 days since we’ve known each other. By the way, I have a surprice for you, please click to NEXT.`,
+`Te amoo muchoooooooooooooo❤️.`
+];
 
-`With all my heart, Forever Yours.`
-    ];
-    
+
+
     let pIndex = 0;
     
     function typeParagraph() {
@@ -407,7 +414,7 @@ We've known each other for quite a while now. I remember the first time I saw yo
       birthdayDiv.className = 'birthday-container';
       const birthdayText = document.createElement('div');
       birthdayText.className = 'birthday-message';
-      birthdayText.textContent = 'Happy Birthday Shobhit';
+      birthdayText.textContent = 'Hecho especialmente para ti dormilonaa 😝😘💗';
       const nextButton = document.createElement('button');
       nextButton.className = 'next-button';
       nextButton.textContent = 'Next';
@@ -420,7 +427,8 @@ We've known each other for quite a while now. I remember the first time I saw yo
     }
     
     // 6) Time Counter
-    const startDate = new Date('2024-06-10T20:16:00');
+    const startDate = new Date('2025-08-20T13:45:00');
+
     function updateTime() {
       const now = new Date();
       const diff = now - startDate;
